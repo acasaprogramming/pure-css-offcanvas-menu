@@ -1,0 +1,124 @@
+/*=====  SLIDE MENU  ======*/
+
+/*----------  HIDE SELECT CHECKBOX  ----------*/
+
+.toggle, 
+.full-screen-close
+{
+	display: none;
+}
+
+.full-screen-close
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	top:0;
+	left:0;
+}
+
+/*----------  TOGGLE OFF-CANVAS MENU  ----------*/
+
+.toggle:checked + .container > .menu-container 
+{
+  	margin-left: 0;
+}
+
+.toggle:checked + .container > .content .full-screen-close
+{
+  	display: block;
+  	background: rgba(0,0,0,.5);
+}
+
+.menu
+{
+	padding-top: 24px;
+}
+
+.toggle-btn,
+.close-btn
+{
+	cursor: pointer;
+}
+
+.toggle-btn
+{
+	font-size: 2.25rem;
+}
+
+
+.close-btn
+{
+	float: right;
+	font-size: 1.5rem;
+	padding: 1.5rem;
+	color: #ededed;
+}
+
+.menu-container, 
+.content
+{
+	transition: margin 0.5s ease-in-out;
+}
+
+.menu-container
+{
+	background: #2c3e50;
+	width: 40%;
+	margin-left: -40%;
+	
+	float: left;
+	height: 100%;
+	position: absolute;
+
+	z-index:99;
+}
+
+.slide-menu i
+{
+	margin-right: 1rem;
+	font-size: 1.5rem;
+
+	vertical-align: middle;
+}
+.slide-menu li a
+{
+	color: #fff;
+	padding: 1.5rem;
+
+	font-size: 1.125rem;
+
+	text-transform: uppercase;
+	font-weight: 600;
+
+	display: block;
+
+	transition: background-color .5s ease-in-out;
+}
+
+.slide-menu li a:hover
+{
+	background-color: #34495e;
+}
+
+/*=====  MEDIA QUERIES  ======*/
+@media (max-width: 460px) {
+	.slide-menu li a
+	{
+		font-size: 0.875rem;
+		padding-left: 12px;
+	}
+
+	.slide-menu li i
+	{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 320px){
+	.slide-menu li i
+	{
+		display: none;
+	}
+}

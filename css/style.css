@@ -1,0 +1,191 @@
+/*=====  UTILITIES  ======*/
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+
+/*=====  GENERAL PAGE STYLES  ======*/
+html, 
+body,
+.container,
+.menu-container
+{
+	width: 100%; /*full screen width*/
+	height: 100%; /*full screen height*/
+	overflow-x: hidden; /*no horizontal scroll bar*/
+}
+
+a
+{
+	text-decoration: none;
+}
+
+ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+body 
+{
+	color: #808080;
+	font-weight: 400;
+	font-size: 1em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+.content
+{
+	width: 100%;
+    max-width: 1200px; 
+
+	margin: 0 auto;
+    padding: 0 1.5rem; 
+    line-height: 1.5;
+}
+
+h1
+{
+	text-align: center;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	font-size: 2.25rem;
+
+	margin: 3rem 0;
+}
+
+
+/*=====  AP META  ======*/
+.ap-meta
+{
+	text-align: center;
+	font-size: 1.125rem;
+}
+.ap-meta a
+{
+	color: #2196F3;
+	margin-right: 24px;
+}
+.ap-meta a:last-child
+{
+	margin-right: 0;
+}
+.ap-meta i
+{
+	margin-right: 6px;
+}
+
+/*===== SLIDE OPTIONS  ======*/
+
+.menu-options
+{
+	margin: 0 auto;
+	margin-bottom: 48px;
+	width: 30%;
+}
+
+.menu-options h3
+{
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 36px;
+}
+
+.menu-options a
+{
+	display: block;
+
+	padding: 6px 12px;
+	border: 1px solid #2196F3;
+	border-radius: 5px;
+
+	color: #2196F3;
+	font-weight: 500;
+
+	margin-bottom: 12px;
+
+	transition: all .5s ease-in-out;
+}
+
+.menu-options a:hover
+{
+	background: #2980b9;
+	color: #fff;
+}
+
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+
+/*===== GENERAL MEDIA QUERIES ======*/
+
+@media (max-width: 980px) {
+	.menu-options
+	{
+		width: 50%;
+	}
+}
+@media (max-width: 605px) {
+	.menu-options
+	{
+		width: 80%;
+	}
+}
+
+@media (max-width: 518px) {
+	.ap-meta a span
+	{
+		display: none;
+	}
+}
+
+
+@media (max-width: 375px) {
+	.ap-meta a span
+	{
+		display: none;
+	}
+	header h1
+	{
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	.menu-options
+	{
+		width: 100%;
+	}
+}
+
+@media (max-width: 330px) {
+	.content
+	{
+		padding: 0 1rem;
+	}
+	.menu
+	{
+		margin-bottom: 1.5rem;
+	}
+	
+	.ap-meta a span
+	{
+		display: none;
+	}
+
+	header h1
+	{
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+
+	.menu-options
+	{
+		width: 100%;
+	}
+}
